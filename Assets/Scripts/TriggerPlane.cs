@@ -6,19 +6,11 @@ public class TriggerPlane : MonoBehaviour {
 	public BoxCollider2D basketCollider;
 	public BoxCollider2D triggerCollider;
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public void resetPlane(){
+		triggerCollider.enabled = true;
 	}
 	void OnTriggerEnter2D(Collider2D collider){
-		//while going up
-		//disable basket that was holding it
-		//check if basket has collider on
-		//if yes then ball is going up
+		//triggers while going up
 		if (basketCollider.isActiveAndEnabled) {
 			//inital holder of ball
 			basketCollider.enabled = false;
